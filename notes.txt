@@ -1,0 +1,22 @@
+Design Patterns : common solutions to common design problems
+Creational Design Patterns: How, when and where objects should be created
+Singleton DP: Only one instance of a particular class should exist ever
+    when do we require only instance of a class
+    -- Logger, DB connection
+    -- The classes which share resources at the end
+    -- Classes which doesn't have state
+ // intuition
+        how you will created a new obj in java
+        -- hide the constructor, make it private
+        so, you won't be able to create even one instance
+        -- create a static method which creates and returns a obj
+        still a new instance will be created whenever we call the method
+        -- write a logic in the method and return only one existing object
+        In multithreaded env it can create multiple instances
+        -- make the method synchronized or create obj during app load time
+        when we deserialize it will create as many instance as we want and that will break
+        this singleton design pattern
+        -- use enums
+        -- In java, enums are complete classes, they can have methods, variables etc
+
+    
