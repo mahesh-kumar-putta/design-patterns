@@ -14,10 +14,14 @@ public class Main {
         Student2 student2 = new Student2.Builder()
                 .setAddress("AP")
                 .setAge(26)
-                .setCollege("SVU")
+                .setCollege("JNTU")
                 .setName("Mahesh").build();
         System.out.println(student2);
 
+        Student3 student3 = Student3.getBuilder().setAddress("AP")
+                .setAge(26).setCollege("AU").setName("Mahesh").build();
+
+        System.out.println(student3);
 
     }
 }
