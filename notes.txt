@@ -19,4 +19,42 @@ Singleton DP: Only one instance of a particular class should exist ever
         -- use enums
         -- In java, enums are complete classes, they can have methods, variables etc
 
+  ---------------------------------------------------
+  Builder Design Pattern:
+  usecase
+    1.A class containing lot of attributes
+    2.Few of the attributes are mandatory
+    3.Objects should be immutable
+  Approaches:
+    1.Create an object using constructor and set values using setter
+        - we might miss to assign values to mandatory fields
+        - violating immutability concept
+    2.Initialize attributes using constructor
+        - we will end up creating lot of constructors
+        - Abc(String name, String city) is same as Abc(String state, String country)
+    3.Initialize mandatory attributes using constructor and optional via setters
+        - violates immutability
+        - lot of constructors based on combination of attributes we are initializing
+    4.Pass a hashmap to constructor
+        - what will K,V in hashMap
+        - possible typo in K
+        - how client will get to know names of keys
+        Positives
+           - Solves immutability
+
+    5.HashMap holds same variables as the actual class, we can have a helper/builder class
+    which contains same variables as the actual class, this will help in avoiding type casting
+    issue and is similar as hashMap which contains key-Value, where keys are like variables of
+    actual class.
+
+    steps:
+    1.Have a static inner class inside actual class with same attributes
+    2.Setters in inner class
+    3.validation in inner class
+    4.build method
+
+
+        
+
+
     
