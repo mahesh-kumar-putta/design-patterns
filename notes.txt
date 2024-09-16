@@ -52,6 +52,28 @@ Singleton DP: Only one instance of a particular class should exist ever
     2.Setters in inner class
     3.validation in inner class
     4.build method
+ ------------------------------------------
+ Factory Design Pattern
+ 1.Creating an instance of one of the subclasses of a particular parent class, without client
+ needing to know it.
+     Database db1 = jbdc.getConn("Postgres URL");
+     Database db2 = jbdc.getConn("MySQL URL");
+ Factory Method : A method in a particular class that allows to create an instance of one of
+ the subclass of an interface without client needing to know about it. It always returns
+ an instance of implementation of an interface.
+
+ ------------------------------------------
+ Prototype Design Pattern:
+ 1.When creating an object is complex. ( DB connection )
+ 2.When we need multiple instances of same type with some difference
+ prototype - blueprint/model
+ 1.In this design pattern we clone an object that already exists and do things on the cloned
+ object
+ 2.Prototype Registry : it is a registry stores prototypes of  different kind of object.
+ Map<String, ClonableObject>
+
+
+
 
 
         
